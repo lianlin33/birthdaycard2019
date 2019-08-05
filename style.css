@@ -1,0 +1,71 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    overflow: hidden;
+}
+/*    插入背景圖片    */
+.p01{
+    background-image:url("https://images.unsplash.com/photo-1523757682081-a78e60705cda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+.p02{
+    background-image:url("https://images.unsplash.com/photo-1507066274042-8a683a1e6ffe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+.p03{
+    background-image:url("https://images.unsplash.com/photo-1500521680613-a8f77c5cd0f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    width: 100vw;
+}
+.p04{
+    background-image:url("https://images.unsplash.com/photo-1484979045040-0ab3854b6acb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1462&q=80");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+.p05{
+    background-image:url("https://images.unsplash.com/photo-1516959512470-53955cd40f40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2546&q=80");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    background-attachment: absolute;
+    background-position:center;
+}
+/*    插入導覽列     */
+.nav{
+    position: fixed;
+    top:50%;
+    right:0px;
+    cursor:pointer;
+}
+li{
+    width:10px;
+    height:10px; 
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5) inset,-1px -1px 1px rgba(0,0,0,0.5) inset;
+    list-style-type: none;
+}
+h1{
+    font-size:60px;
+    color:#333;
+    text-shadow:0px 0px 5px white;
+}
+.congratulate {
+    font-family: 'Kaushan Script', cursive;
+    font-size:72px ;
+    position: absolute;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
