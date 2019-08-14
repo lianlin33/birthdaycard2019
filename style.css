@@ -1,6 +1,7 @@
 *{
     padding:0;
     margin:0;
+    /* border: 1px  solid #000; 顯示格線 */
 }
 body{
     overflow: hidden;
@@ -39,7 +40,7 @@ body{
     background-attachment: absolute;
     background-position:center;
 }
-/*    插入導覽列     */
+/*    插入導覽列～移動小圓點     */
 .nav{
     position: fixed;
     top:50%;
@@ -55,17 +56,81 @@ li{
     box-shadow: 1px 1px 1px rgba(0,0,0,0.5) inset,-1px -1px 1px rgba(0,0,0,0.5) inset;
     list-style-type: none;
 }
+
+/* 第一頁～生日快樂 */
+
 h1{
     font-size:60px;
-    color:#333;
-    text-shadow:0px 0px 5px white;
+    color:rgb(119, 120, 212);
+    text-shadow:0px 0px 10px #eee;
 }
 .congratulate {
+    display: inline-block;
     font-family: 'Kaushan Script', cursive;
     font-size:72px ;
-    position: absolute;
-    position: absolute;
+    position: relative;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 0 20px;
+}
+/* 第二頁～～許願 */
+h2{
+    color:rgb(119, 120, 212);
+    text-shadow:0px 0px 3px #eee;
+    font-size: 30px;
+    font-family: 微軟正黑體;
+    /* font-weight: 200; */
+}
+/* 偽元素～製作閃爍游標 */
+.type:after , .type2:after , .type3:after {
+    content:"";
+    border-right: 1px solid #000;
+    animation: 0.75s infinite shine;
+}
+@keyframes shine {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#wish{
+    padding: 60px ;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* 第三頁～卡片1 */
+.type2 , .type3{
+    font-size: 20px;
+    font-family: 微軟正黑體;
+    padding: 20px;
+}
+#card1 , #card2{
+    /* border: 1px  solid #fff; */
+    display: block;
+    width: 70%;
+    height: 65vh;
+    margin: 0 auto;
+    position: relative;
+    top:15%;
+    background-color:rgba(255,255,255,0.4);
+    /* box-shadow:5px 0px rgba(255,255,255,0.5); */
+}
+
+/* 第四頁～卡片2 */
+
+/* 第五頁～愛你 */
+.confession{
+    display: inline-block;
+    font-family: 'Kaushan Script', cursive;
+    font-size:60px ;
+    position: relative;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    padding: 0 45px ;
 }
