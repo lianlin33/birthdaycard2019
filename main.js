@@ -148,3 +148,36 @@ function type3() {
 
 document.addEventListener("DOMContentLoded", type3());   // DOMContentLoded 網頁載入完成後執行
 
+var versions = function (){
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var ua = navigator.userAgent.toLowerCase();
+
+    return { //偵測移動端瀏覽器版本信息
+        trident: u.indexOf('Trident') > -1, //IE 核心
+        presto: u.indexOf('Presto') > -1, //opera 核心
+        webKit: u.indexOf('AppleWebKit') > -1, //Apple, google 核心
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //Firefox 核心
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //行動裝置
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android或uc瀏覽器
+        iPhone: u.indexOf('iPhone') > -1, //是否為iPhone或者QQHD瀏覽器
+        iPad: u.indexOf('iPad') > -1, //是否iPad
+        webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+        iosv: u.substr(u.indexOf('iPhone OS') + 9, 3),//ios版本
+        weixin: ua.match(/MicroMessenger/i) == "micromessenger",//微信瀏覽器
+        fbapp: u.indexOf('FBAV') > -1,//Facebook App內瀏覽器
+        line: u.indexOf('Line') > -1//Line內瀏覽器
+    };
+}();
+
+// redir to mobile version
+if( versions.mobile ){
+    location.href = 'https://' + location.hostname + '/mobile.html';
+}
+
+// inside of weixin app
+if( versions.weixin ){
+    
+}else{
+    
+}
